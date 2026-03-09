@@ -231,23 +231,24 @@ Controllers → Services → Models → Database
 
 ## Projects
 
-  Method   Endpoint              Description
-  -------- --------------------- ------------------
-  POST     `/api/projects`       Create project
-  GET      `/api/projects`       Get all projects
-  GET      `/api/projects/:id`   Get project
-  PUT      `/api/projects/:id`   Update project
-  DELETE   `/api/projects/:id`   Delete project
+| Method | Endpoint            | Description          |
+| ------ | ------------------- | -------------------- |
+| POST   | `/api/projects`     | Create a new project |
+| GET    | `/api/projects`     | Get all projects     |
+| GET    | `/api/projects/:id` | Get project by ID    |
+| PUT    | `/api/projects/:id` | Update project       |
+| DELETE | `/api/projects/:id` | Delete project       |
 
 ## Tasks
 
-  Method   Endpoint           Description
-  -------- ------------------ -------------
-  POST     `/api/tasks`       Create task
-  GET      `/api/tasks`       Get tasks
-  GET      `/api/tasks/:id`   Get task
-  PUT      `/api/tasks/:id`   Update task
-  DELETE   `/api/tasks/:id`   Delete task
+| Method | Endpoint         | Description       |
+| ------ | ---------------- | ----------------- |
+| POST   | `/api/tasks`     | Create a new task |
+| GET    | `/api/tasks`     | Get all tasks     |
+| GET    | `/api/tasks/:id` | Get task by ID    |
+| PUT    | `/api/tasks/:id` | Update task       |
+| DELETE | `/api/tasks/:id` | Delete task       |
+
 
 Supports:
 
