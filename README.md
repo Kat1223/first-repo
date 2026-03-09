@@ -1,303 +1,195 @@
-# 🚀 TaskFlow API
 
-![Node.js](https://img.shields.io/badge/Node.js-18+-green)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)
-![Coverage](https://img.shields.io/badge/Test%20Coverage-80%25+-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+# TaskFlow API
 
-TaskFlow API is a **production-ready task management backend** built
-with **Node.js, Express, TypeScript, MongoDB Atlas, and Socket.io**.
+A production-ready Node.js Task Management API built with **TypeScript, Express, MongoDB, and Socket.IO**, featuring authentication, role-based access control, file handling, real-time updates, and comprehensive testing.
 
-It supports authentication, project and task management, file uploads,
-real-time updates, email notifications, and advanced query utilities.
+This project demonstrates **clean architecture, scalable backend design, and robust testing practices** suitable for modern production systems.
 
-------------------------------------------------------------------------
+---
 
-# 📌 Features
+# Demo Video
 
-### 🔐 Authentication
+Watch the full project demonstration:
 
--   JWT Access + Refresh tokens
--   Secure password hashing (bcrypt)
--   Password reset via email
--   Protected routes
+Demo:  
+https://drive.google.com/file/u/1/d/1mNqZPR3IJhIEnS1pz-7cU4BAYV9FDpGW/view?usp=drivesdk
 
-### 👤 User Management
+---
 
--   Signup & login
--   Get current user
--   Avatar upload
+# Project Overview
 
-### 📁 Project Management
+TaskFlow API is a modular backend system designed for managing projects and tasks collaboratively.
 
--   Create projects
--   Assign members
--   Project activity tracking
+It provides:
 
-### ✅ Task Management
+- Secure JWT authentication
+- Project & task management
+- Role-based authorization
+- Real-time task updates
+- File uploads and exports
+- Comprehensive testing with Jest
+- Production-ready architecture
 
--   Create and update tasks
--   Task assignment
--   Priority and status management
--   Soft delete tasks
+---
 
-### 💬 Comments
+# Features
 
--   Add comments to tasks
--   Track task discussions
+## Authentication & Security
+- JWT-based authentication
+- Access & refresh token flow
+- Role-based authorization middleware
+- Secure password hashing
 
-### 📎 Attachments
+## Task Management
+- Create, update, delete tasks
+- Task assignment
+- Task status tracking
+- Comment support
 
--   Upload files
--   Download attachments
+## Project Management
+- Create projects
+- Manage project members
+- Associate tasks with projects
 
-### ⚡ Real-Time Updates
+## File Handling
+- Task attachments
+- Avatar uploads
+- CSV task exports
+- PDF project reports
 
-Using **Socket.io** - Task updates - Comment notifications - Project
-events
+## Real-Time Features
+- Socket.IO real-time updates
+- Live task status updates
+- Real-time notifications
 
-### 📊 Query Utilities
+## Performance Features
+- Pagination
+- Cursor-based queries
+- Sorting utilities
 
--   Pagination
--   Sorting
--   Filtering
--   Cursor pagination
-
-### 📧 Email Notifications
-
-Using **Nodemailer** - Welcome email - Password reset email - Task
-assignment notifications - Comment alerts
-
-### 🛡 Security
-
--   Helmet
--   Rate limiting
--   Input validation
--   Global error handling
-
-------------------------------------------------------------------------
-
-# 🛠 Tech Stack
-
-## Backend
-
--   Node.js
--   Express.js
--   TypeScript
-
-## Database
-
--   MongoDB Atlas
--   Mongoose
-
-## Realtime
-
--   Socket.io
-
-## Authentication
-
--   JWT
--   bcrypt
-
-## File Upload
-
--   Multer
-
-## Email
-
--   Nodemailer
+## Production Utilities
+- Request logging
+- Error handling system
+- Rate limiting
+- Compression middleware
 
 ## Testing
+- Unit tests
+- Integration tests
+- MongoMemoryServer test database
+- >80% code coverage
 
--   Jest
--   Supertest
--   MongoMemoryServer
+---
 
-------------------------------------------------------------------------
+# Tech Stack
 
-# 📂 Project Structure
+Backend
+- Node.js
+- Express.js
+- TypeScript
 
-    src
-    │
-    ├── config
-    │   └── multer.config.ts
-    │
-    ├── controllers
-    │   ├── auth.controller.ts
-    │   ├── project.controller.ts
-    │   ├── task.controller.ts
-    │   └── comment.controller.ts
-    │
-    ├── middleware
-    │   ├── auth.middleware.ts
-    │   ├── error.middleware.ts
-    │   ├── role.middleware.ts
-    │   └── socket.middleware.ts
-    │
-    ├── models
-    │   ├── user.model.ts
-    │   ├── project.model.ts
-    │   ├── task.model.ts
-    │   └── comment.model.ts
-    │
-    ├── routes
-    │   ├── auth.routes.ts
-    │   ├── project.routes.ts
-    │   ├── task.routes.ts
-    │   └── health.routes.ts
-    │
-    ├── services
-    │   ├── auth.service.ts
-    │   ├── project.service.ts
-    │   ├── task.service.ts
-    │   ├── email.service.ts
-    │   └── socket.service.ts
-    │
-    ├── utils
-    │   ├── logger.util.ts
-    │   ├── pagination.util.ts
-    │   ├── sort.util.ts
-    │   └── token.util.ts
-    │
-    ├── validators
-    │   └── task.validator.ts
-    │
-    ├── app.ts
-    └── server.ts
+Database
+- MongoDB
+- Mongoose
 
-------------------------------------------------------------------------
+Real-time
+- Socket.IO
 
-# ⚙️ Environment Variables
+Testing
+- Jest
+- Supertest
+- MongoMemoryServer
 
-Create a `.env` file in the root directory.
+Utilities
+- Multer
+- jsonwebtoken
+- express-validator
 
-    PORT=3000
-    MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/taskflow
-    JWT_SECRET=supersecret
-    CORS_ORIGIN=http://localhost:3000
+---
 
-    EMAIL_HOST=smtp.ethereal.email
-    EMAIL_PORT=587
-    EMAIL_USER=email@example.com
-    EMAIL_PASSWORD=password
-    EMAIL_FROM="TaskFlow API <noreply@taskflow.com>"
+# Project Architecture
 
-------------------------------------------------------------------------
+Controllers → Services → Models → Database
 
-# 🚀 Installation
+---
 
-Clone the repository
+# Installation
 
-    git clone https://github.com/yourusername/taskflow-api.git
-    cd taskflow-api
+Clone the repository:
 
-Install dependencies
+git clone <repository-url>
+cd taskflow-api
 
-    npm install
+Install dependencies:
 
-Run development server
+npm install
 
-    npm run dev
+---
 
-Server runs on:
+# Environment Variables
 
-    http://localhost:3000
+Create a `.env` file:
 
-------------------------------------------------------------------------
+PORT=3000  
+MONGO_URI=your_mongodb_connection  
+JWT_SECRET=your_secret  
+CORS_ORIGIN=http://localhost:3000  
 
-# 🧪 Running Tests
+---
 
-Run tests
+# Running the Application
 
-    npm test
+Development mode:
 
-Run coverage
+npm run dev
 
-    npm run test:coverage
+Production:
 
-------------------------------------------------------------------------
+npm run build  
+npm start
 
-# 📡 API Endpoints
+---
 
-## Authentication
+# Running Tests
 
-### Signup
+npm test
 
-POST /api/auth/signup
+Coverage:
 
-Example body
+npm run test:coverage
 
-``` json
-{
-  "email": "user@test.com",
-  "password": "password123",
-  "name": "User"
-}
-```
+---
 
-### Login
+# Postman Collection
 
-POST /api/auth/login
+The repository includes a **Postman collection** for testing all API endpoints.
 
-### Refresh Token
+Import:
 
-POST /api/auth/refresh
+TaskFlow.postman_collection.json
 
-### Current User
+---
 
-GET /api/auth/me
+# Version Tags
 
-Header
+v0.1.0-foundation  
+v0.2.0-models  
+v0.3.0-crud-api  
+v0.4.0-auth-system  
+v0.5.0-validation-error-handling  
+v0.6.0-file-handling  
+v0.7.0-realtime-pagination  
+v0.8.0-production-email  
+v1.0.0-taskflow-api  
 
-Authorization: Bearer `<token>`{=html}
+---
 
-------------------------------------------------------------------------
+# Author
 
-# 📁 Project Routes
+Adhi
 
-Create project
+---
 
-POST /api/projects
+# License
 
-Get projects
-
-GET /api/projects
-
-------------------------------------------------------------------------
-
-# ✅ Task Routes
-
-Create task
-
-POST /api/tasks
-
-Get tasks
-
-GET /api/tasks
-
-Update task
-
-PUT /api/tasks/:id
-
-Delete task
-
-DELETE /api/tasks/:id
-
-------------------------------------------------------------------------
-
-# ⚡ Real-time Events
-
-Socket.io events
-
--   task:created
--   task:updated
--   comment:added
--   project:updated
-
-------------------------------------------------------------------------
-
-# 👨‍💻 Author
-
-Adhi\
-Backend Developer \| Node.js \| MongoDB \| TypeScript
+This project was developed as part of a backend engineering exercise.
