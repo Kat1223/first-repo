@@ -24,13 +24,9 @@ backend engineering portfolios**.
 
 ------------------------------------------------------------------------
 
-# 🎥 Demo Video
 
-Watch the full project demonstration.
 
-🎬 **Project Demo**
-
-https://drive.google.com/file/u/1/d/1mNqZPR3IJhIEnS1pz-7cU4BAYV9FDpGW/view?usp=drivesdk
+🎬 **Project Demo** : https://drive.google.com/file/u/1/d/1mNqZPR3IJhIEnS1pz-7cU4BAYV9FDpGW/view?usp=drivesdk
 
 ### The demo covers
 
@@ -340,9 +336,3 @@ Includes requests for:
 
 ------------------------------------------------------------------------
 
-# 👨‍💻 Author
-
-**Adhi**
-
-Backend Developer\
-MERN Stack \| Node.js \| TypeScript
