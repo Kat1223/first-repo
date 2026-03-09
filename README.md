@@ -221,12 +221,13 @@ Controllers → Services → Models → Database
 
 ## Authentication
 
-  Method   Endpoint              Description
-  -------- --------------------- ----------------------
-  POST     `/api/auth/signup`    Register user
-  POST     `/api/auth/login`     Login user
-  POST     `/api/auth/refresh`   Refresh access token
-  GET      `/api/auth/me`        Get current user
+| Method | Endpoint            | Description                    |
+| ------ | ------------------- | ------------------------------ |
+| POST   | `/api/auth/signup`  | Register a new user            |
+| POST   | `/api/auth/login`   | Login user                     |
+| POST   | `/api/auth/refresh` | Refresh access token           |
+| GET    | `/api/auth/me`      | Get current authenticated user |
+
 
 ## Projects
 
