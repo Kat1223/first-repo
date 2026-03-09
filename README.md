@@ -1,49 +1,63 @@
 # 🚀 TaskFlow API
 
-A **production-ready Task Management API** built with **Node.js,
-TypeScript, Express, MongoDB, and Socket.IO**.
+```{=html}
+<p align="center">
+```
+![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Express](https://img.shields.io/badge/Express.js-Backend-black?style=for-the-badge&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb)
+![Socket.IO](https://img.shields.io/badge/Socket.IO-Realtime-orange?style=for-the-badge&logo=socket.io)
+![Jest](https://img.shields.io/badge/Tested%20With-Jest-red?style=for-the-badge&logo=jest)
 
-It demonstrates **clean backend architecture, scalable design, real-time
-systems, authentication, and strong testing practices**, making it
-suitable for **modern production systems and backend engineering
-portfolios**.
+```{=html}
+</p>
+```
+A **production-ready Task Management API** built with:
+
+**Node.js • TypeScript • Express • MongoDB • Socket.IO**
+
+This project demonstrates **clean backend architecture, scalable API
+design, real-time systems, authentication, and strong testing
+practices**, making it suitable for **modern production systems and
+backend engineering portfolios**.
 
 ------------------------------------------------------------------------
 
 # 🎥 Demo Video
 
-Watch the full project demonstration:
+Watch the full project demonstration.
 
-🎬 **Project Demo**\
+🎬 **Project Demo**
+
 https://drive.google.com/file/u/1/d/1mNqZPR3IJhIEnS1pz-7cU4BAYV9FDpGW/view?usp=drivesdk
 
 ### The demo covers
 
--   API architecture overview\
--   Authentication workflow\
--   CRUD operations\
--   Real-time socket events\
--   File uploads & exports\
--   Test coverage demonstration
+• Backend architecture overview\
+• Authentication workflow\
+• Task & project CRUD APIs\
+• Real-time Socket.IO events\
+• File uploads and exports\
+• Automated testing and coverage
 
 ------------------------------------------------------------------------
 
 # 📌 Project Overview
 
 **TaskFlow API** is a modular backend system designed for
-**collaborative project and task management**.
+**collaborative task and project management**.
 
-### Key Capabilities
+It includes:
 
-✔ Secure JWT authentication\
-✔ Project and task collaboration\
-✔ Role-based authorization\
-✔ Real-time updates via Socket.IO\
-✔ File uploads and exports\
-✔ High test coverage with Jest\
-✔ Production-ready middleware and utilities
+✔ Secure authentication\
+✔ Real-time updates\
+✔ File handling\
+✔ Scalable architecture\
+✔ Production middleware\
+✔ High test coverage
 
-Architecture follows:
+### Architecture Pattern
 
 Controllers → Services → Models → Database
 
@@ -53,29 +67,33 @@ Controllers → Services → Models → Database
 
 ## 🔐 Authentication & Security
 
--   JWT-based authentication
--   Access & refresh token flow
--   Role-based authorization middleware
+-   JWT based authentication
+-   Access token & refresh token flow
+-   Role based authorization
 -   Secure password hashing
+-   Protected routes middleware
 
 ## 📋 Task Management
 
--   Create, update, and delete tasks
+-   Create tasks
+-   Update tasks
+-   Delete tasks
 -   Assign tasks to users
--   Task status tracking
--   Comment support
+-   Track task status
+-   Task comments
 
 ## 📁 Project Management
 
 -   Create projects
--   Manage project members
+-   Add project members
+-   Manage project roles
 -   Associate tasks with projects
 
 ## 📎 File Handling
 
 -   Task attachments
 -   User avatar uploads
--   CSV task exports
+-   CSV task export
 -   PDF project reports
 
 ## ⚡ Real-Time Features
@@ -83,26 +101,30 @@ Controllers → Services → Models → Database
 -   Socket.IO integration
 -   Live task status updates
 -   Real-time notifications
+-   Room-based project communication
 
 ## 🚀 Performance Features
 
--   Pagination
--   Cursor-based queries
+-   Pagination support
+-   Cursor based queries
 -   Sorting utilities
+-   Optimized database queries
 
 ## 🏭 Production Utilities
 
--   Request logging
 -   Centralized error handling
+-   Request logging
 -   Rate limiting
 -   Compression middleware
+-   Environment configuration
 
 ## 🧪 Testing
 
 -   Unit tests
 -   Integration tests
--   MongoMemoryServer test database
--   80%+ code coverage
+-   MongoMemoryServer database
+-   API testing with Supertest
+-   High code coverage
 
 ------------------------------------------------------------------------
 
@@ -119,7 +141,7 @@ Controllers → Services → Models → Database
 -   MongoDB
 -   Mongoose
 
-## Real-time
+## Realtime Communication
 
 -   Socket.IO
 
@@ -199,47 +221,51 @@ Controllers → Services → Models → Database
 
 ## Authentication
 
-  Method   Endpoint            Description
-  -------- ------------------- ----------------------
-  POST     /api/auth/signup    Register user
-  POST     /api/auth/login     Login user
-  POST     /api/auth/refresh   Refresh access token
-  GET      /api/auth/me        Get current user
+  Method   Endpoint              Description
+  -------- --------------------- ----------------------
+  POST     `/api/auth/signup`    Register user
+  POST     `/api/auth/login`     Login user
+  POST     `/api/auth/refresh`   Refresh access token
+  GET      `/api/auth/me`        Get current user
 
 ## Projects
 
-  Method   Endpoint
-  -------- -------------------
-  POST     /api/projects
-  GET      /api/projects
-  GET      /api/projects/:id
-  PUT      /api/projects/:id
-  DELETE   /api/projects/:id
+  Method   Endpoint              Description
+  -------- --------------------- ------------------
+  POST     `/api/projects`       Create project
+  GET      `/api/projects`       Get all projects
+  GET      `/api/projects/:id`   Get project
+  PUT      `/api/projects/:id`   Update project
+  DELETE   `/api/projects/:id`   Delete project
 
 ## Tasks
 
-  Method   Endpoint
-  -------- ----------------
-  POST     /api/tasks
-  GET      /api/tasks
-  GET      /api/tasks/:id
-  PUT      /api/tasks/:id
-  DELETE   /api/tasks/:id
+  Method   Endpoint           Description
+  -------- ------------------ -------------
+  POST     `/api/tasks`       Create task
+  GET      `/api/tasks`       Get tasks
+  GET      `/api/tasks/:id`   Get task
+  PUT      `/api/tasks/:id`   Update task
+  DELETE   `/api/tasks/:id`   Delete task
 
-Supports pagination, sorting, and cursor-based queries.
+Supports:
+
+• Pagination\
+• Sorting\
+• Cursor based queries
 
 ------------------------------------------------------------------------
 
 # ⚙️ Installation
 
-Clone the repository
+### Clone repository
 
 ``` bash
 git clone <repository-url>
 cd taskflow-api
 ```
 
-Install dependencies
+### Install dependencies
 
 ``` bash
 npm install
@@ -249,22 +275,22 @@ npm install
 
 # 🔑 Environment Variables
 
-Create `.env`
+Create a `.env` file.
 
     PORT=3000
     MONGO_URI=your_mongodb_connection
-    JWT_SECRET=your_secret
+    JWT_SECRET=your_secret_key
     CORS_ORIGIN=http://localhost:3000
 
 ------------------------------------------------------------------------
 
 # ▶️ Running the Application
 
-Development
+### Development
 
     npm run dev
 
-Production
+### Production
 
     npm run build
     npm start
@@ -273,7 +299,7 @@ Production
 
 # 🧪 Running Tests
 
-Run tests
+Run all tests
 
     npm test
 
@@ -285,16 +311,16 @@ Run with coverage
 
 # 📬 Postman Collection
 
-Import:
+Import the collection:
 
-TaskFlow.postman_collection.json
+    TaskFlow.postman_collection.json
 
 Includes requests for:
 
--   Authentication
--   Projects
--   Tasks
--   File uploads
+• Authentication\
+• Projects\
+• Tasks\
+• File uploads
 
 ------------------------------------------------------------------------
 
@@ -314,5 +340,7 @@ Includes requests for:
 
 # 👨‍💻 Author
 
-**Adhi**\
-Backend Developer \| MERN Stack \| Node.js \| TypeScript
+**Adhi**
+
+Backend Developer\
+MERN Stack \| Node.js \| TypeScript
